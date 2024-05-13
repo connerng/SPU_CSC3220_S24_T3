@@ -1,0 +1,14 @@
+select p.ProductID, p.Name, p.Description, p.Vendor 
+	from Product p
+	join Controller c on c.ControllerID = p.ControllerID
+	where Vendor = 2
+
+update House
+set SquareFootage = 2500, Products = 1
+where SquareFootage = NULL
+
+insert into Product(ProductID, Name, Description, , Vendor, UtilityID, ControllerID)
+values(0, "AC Unit", "AC", 0, 0, 0)
+
+
+delete from Utility where PowerConsumption > 1000
